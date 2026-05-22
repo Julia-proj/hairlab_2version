@@ -1,0 +1,21 @@
+---
+import { hairlab } from '../data/hairlab';
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__logo">
+      {hairlab.footer.logo}
+    </div>
+    <div class="footer__links">
+      {hairlab.footer.links.map((link) => (
+        <a href={link.href}>
+          {link.text}
+        </a>
+      ))}
+    </div>
+    <div class="footer__copy">
+      {hairlab.footer.copy}
+    </div>
+  </div>
+</footer>

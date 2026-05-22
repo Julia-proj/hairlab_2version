@@ -1,0 +1,38 @@
+---
+import { hairlab } from '../data/hairlab';
+import Button from '../ui/Button.astro';
+import Countdown from '../islands/Countdown.tsx';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+---
+
+<Section alt>
+  <Container class="bonus__grid">
+    <div>
+      <p class="eyebrow">
+        {hairlab.bonusCountdown.eyebrow}
+      </p>
+      {hairlab.bonusCountdown.bonuses.map((bonus) => (
+        <div class="bonus__item">
+          <span class="bonus__num">
+            ({bonus.num})
+          </span>
+          <span class="body body--sm">
+            {bonus.text}
+          </span>
+        </div>
+      ))}
+      <Button variant="primary" data-cta-id="bonus">
+        {hairlab.bonusCountdown.ctaText}
+      </Button>
+    </div>
+    <div class="countdown">
+      <div class="countdown__digits">
+        <Countdown client:visible />
+      </div>
+      <p class="caption countdown__label">
+        {hairlab.bonusCountdown.label}
+      </p>
+    </div>
+  </Container>
+</Section>

@@ -1,0 +1,23 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import NumberedList from '../ui/NumberedList.astro';
+---
+
+<Section>
+  <Container>
+    <div class="text-center">
+      <p class="eyebrow">
+        {hairlab.whyNotOpen.eyebrow}
+      </p>
+      <h2 class="h2">
+        {hairlab.whyNotOpen.title}
+      </h2>
+    </div>
+    <NumberedList items={hairlab.whyNotOpen.items} />
+    <p class="closing-line">
+      {hairlab.whyNotOpen.closingLine}
+    </p>
+  </Container>
+</Section>

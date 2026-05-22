@@ -1,0 +1,13 @@
+---
+interface Props {
+  alt?: boolean;
+  class?: string;
+  id?: string;
+}
+
+const { alt = false, class: className, id } = Astro.props;
+---
+
+<section id={id} class={`section ${alt ? 'section--alt' : ''} ${className || ''}`}>
+  <slot />
+</section>

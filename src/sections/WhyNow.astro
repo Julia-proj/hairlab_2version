@@ -1,0 +1,31 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import Button from '../ui/Button.astro';
+---
+
+<Section class="whynow">
+  <Container>
+    <h2 class="h2">
+      {hairlab.whyNow.title}
+    </h2>
+    <div class="body whynow__list">
+      {hairlab.whyNow.paragraphs.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+    </div>
+    <div class="whynow__card">
+      <div class="whynow__prices">
+        <span class="old">{hairlab.whyNow.oldPrice}</span>
+        {hairlab.whyNow.newPrice}
+      </div>
+      <Button variant="primary" data-cta-id="whynow" class="w-full" style="margin-top: 24px;">
+        {hairlab.whyNow.ctaText}
+      </Button>
+      <p class="caption" style="margin-top: 16px;">
+        {hairlab.whyNow.note}
+      </p>
+    </div>
+  </Container>
+</Section>

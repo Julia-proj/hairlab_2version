@@ -1,0 +1,32 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  eyebrow: string;
+  oldPrice: string;
+  newPrice: string;
+  note: string;
+  ctaText: string;
+  ctaId: string;
+}
+
+const { eyebrow, oldPrice, newPrice, note, ctaText, ctaId } = Astro.props;
+---
+
+<div class="pricing-card">
+  <p class="eyebrow">
+    {eyebrow}
+  </p>
+  <p class="pricing-card__old">
+    {oldPrice}
+  </p>
+  <p class="pricing-card__new">
+    {newPrice}
+  </p>
+  <p class="caption pricing-card__note">
+    {note}
+  </p>
+  <Button variant="primary" data-cta-id={ctaId} class="w-full">
+    {ctaText}
+  </Button>
+</div>

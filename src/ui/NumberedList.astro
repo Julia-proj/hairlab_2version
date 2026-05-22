@@ -1,0 +1,21 @@
+---
+interface Props {
+  items: readonly string[];
+  class?: string;
+}
+
+const { items, class: className } = Astro.props;
+---
+
+<div class={`numbered ${className || ''}`}>
+  {items.map((item, index) => (
+    <div class="numbered__item">
+      <span class="numbered__num">
+        ({index + 1})
+      </span>
+      <span class="numbered__text">
+        {item}
+      </span>
+    </div>
+  ))}
+</div>

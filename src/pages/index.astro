@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../sections/Nav.astro';
+import Hero from '../sections/Hero.astro';
+import Marquee from '../sections/Marquee.astro';
+import BonusCountdown from '../sections/BonusCountdown.astro';
+import WhyNotOpen from '../sections/WhyNotOpen.astro';
+import WhatYouGet from '../sections/WhatYouGet.astro';
+import SevenSigns from '../sections/SevenSigns.astro';
+import BeforeAfter from '../sections/BeforeAfter.astro';
+import Principles from '../sections/Principles.astro';
+import Author from '../sections/Author.astro';
+import WhyNow from '../sections/WhyNow.astro';
+import Reels from '../sections/Reels.astro';
+import Guarantee from '../sections/Guarantee.astro';
+import Faq from '../sections/Faq.astro';
+import FinalCta from '../sections/FinalCta.astro';
+import Footer from '../sections/Footer.astro';
+import StickyMobileCta from '../islands/StickyMobileCta.tsx';
+---
+
+<Base>
+  <a id="top"></a>
+  <Nav />
+  <Hero />
+  <Marquee />
+  <BonusCountdown />
+  <WhyNotOpen />
+  <WhatYouGet />
+  <SevenSigns />
+  <BeforeAfter />
+  <Principles />
+  <Author />
+  <WhyNow />
+  <Reels />
+  <Guarantee />
+  <Faq />
+  <FinalCta />
+  <Footer />
+  <StickyMobileCta client:idle />
+</Base>
+
+<style>
+  @media (min-width: 900px) {
+    :global(.sticky-cta) {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import FeatureList from '../ui/FeatureList.astro';
+import PricingCard from '../ui/PricingCard.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+---
+
+<Section alt id="inside">
+  <Container>
+    <SectionHeading eyebrow={hairlab.whatYouGet.eyebrow} title={hairlab.whatYouGet.title} />
+    <div style="display: grid; gap: 56px; align-items: start;">
+      <FeatureList items={hairlab.whatYouGet.features} />
+      <PricingCard
+        eyebrow={hairlab.whatYouGet.pricing.eyebrow}
+        oldPrice={hairlab.whatYouGet.pricing.oldPrice}
+        newPrice={hairlab.whatYouGet.pricing.newPrice}
+        note={hairlab.whatYouGet.pricing.note}
+        ctaText={hairlab.whatYouGet.pricing.ctaText}
+        ctaId="pricing-1"
+      />
+    </div>
+  </Container>
+</Section>

@@ -1,0 +1,40 @@
+---
+import { hairlab } from '../data/hairlab';
+import Button from '../ui/Button.astro';
+---
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow">
+        {hairlab.hero.eyebrow}
+      </p>
+      <h1 class="display">
+        {hairlab.hero.title}
+      </h1>
+      <p class="body hero__subtitle">
+        {hairlab.hero.subtitle}
+      </p>
+      <div class="hero__cta-row">
+        <Button variant="primary" data-cta-id="hero-primary">
+          {hairlab.hero.primaryCta}
+        </Button>
+        <Button variant="ghost" href="#program">
+          {hairlab.hero.ghostCta}
+        </Button>
+      </div>
+      <p class="caption hero__micro">
+        {hairlab.hero.micro}
+      </p>
+    </div>
+    <div class="hero__img">
+      <img
+        src={hairlab.hero.image.src}
+        alt={hairlab.hero.image.alt}
+        fetchpriority="high"
+        width="600"
+        height="600"
+      />
+    </div>
+  </div>
+</section>

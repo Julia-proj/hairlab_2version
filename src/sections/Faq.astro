@@ -1,0 +1,22 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import FaqAccordion from '../islands/FaqAccordion.tsx';
+---
+
+<Section alt id="faq">
+  <Container>
+    <div class="text-center">
+      <p class="eyebrow">
+        {hairlab.faq.eyebrow}
+      </p>
+      <h2 class="h2">
+        {hairlab.faq.title}
+      </h2>
+    </div>
+    <div class="faq" style="margin-top: 32px;">
+      <FaqAccordion items={hairlab.faq.items} client:visible />
+    </div>
+  </Container>
+</Section>

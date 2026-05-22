@@ -1,0 +1,21 @@
+---
+import { hairlab } from '../data/hairlab';
+---
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo">
+      {hairlab.nav.logo}
+    </a>
+    <div class="nav__links">
+      {hairlab.nav.links.map((link) => (
+        <a href={link.href}>
+          {link.text}
+        </a>
+      ))}
+    </div>
+    <a href={import.meta.env.PUBLIC_CHECKOUT_URL || '#'} class="nav__cta" data-cta-id="nav">
+      {hairlab.nav.ctaText}
+    </a>
+  </div>
+</nav>

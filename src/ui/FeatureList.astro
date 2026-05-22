@@ -1,0 +1,15 @@
+---
+interface Props {
+  items: readonly string[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="feature-list">
+  {items.map((item) => (
+    <li>
+      {item}
+    </li>
+  ))}
+</ul>

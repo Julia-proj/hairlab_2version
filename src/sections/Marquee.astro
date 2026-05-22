@@ -1,0 +1,14 @@
+---
+import { hairlab } from '../data/hairlab';
+---
+
+<div class="marquee">
+  <div class="marquee__track">
+    {hairlab.marquee.items.map((item) => (
+      <span>{item} ·</span>
+    ))}
+    {hairlab.marquee.items.map((item) => (
+      <span>{item} ·</span>
+    ))}
+  </div>
+</div>

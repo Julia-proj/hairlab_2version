@@ -1,0 +1,33 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+---
+
+<Section>
+  <Container>
+    <div class="text-center">
+      <p class="eyebrow">
+        {hairlab.principles.eyebrow}
+      </p>
+      <h2 class="h2">
+        {hairlab.principles.title}
+      </h2>
+    </div>
+    <div class="principles__grid">
+      {hairlab.principles.items.map((item) => (
+        <div>
+          <div class="principle__num">
+            {item.num}
+          </div>
+          <h3 class="h3 principle__title">
+            {item.title}
+          </h3>
+          <p class="body body--sm principle__text">
+            {item.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</Section>

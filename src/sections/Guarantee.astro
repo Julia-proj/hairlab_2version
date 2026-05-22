@@ -1,0 +1,19 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+---
+
+<Section class="guarantee">
+  <Container>
+    <p class="eyebrow">
+      {hairlab.guarantee.eyebrow}
+    </p>
+    <p class="guarantee__quote">
+      {hairlab.guarantee.quote}
+    </p>
+    <p class="guarantee__sign">
+      {hairlab.guarantee.sign}
+    </p>
+  </Container>
+</Section>
