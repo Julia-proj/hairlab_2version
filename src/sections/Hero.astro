@@ -4,8 +4,17 @@ import Button from '../ui/Button.astro';
 ---
 
 <section class="hero">
-  <div class="container hero__grid">
-    <div>
+  <img
+    class="hero__bg"
+    src={hairlab.hero.image.src}
+    alt={hairlab.hero.image.alt}
+    fetchpriority="high"
+    width="1014"
+    height="1551"
+  />
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="container hero__content">
+    <div class="hero__copy">
       <p class="eyebrow">
         {hairlab.hero.eyebrow}
       </p>
@@ -16,7 +25,7 @@ import Button from '../ui/Button.astro';
         {hairlab.hero.subtitle}
       </p>
       <div class="hero__cta-row">
-        <Button variant="primary" data-cta-id="hero-primary">
+        <Button variant="light" data-cta-id="hero-primary">
           {hairlab.hero.primaryCta}
         </Button>
         <Button variant="ghost" href="#program">
@@ -26,15 +35,6 @@ import Button from '../ui/Button.astro';
       <p class="caption hero__micro">
         {hairlab.hero.micro}
       </p>
-    </div>
-    <div class="hero__img">
-      <img
-        src={hairlab.hero.image.src}
-        alt={hairlab.hero.image.alt}
-        fetchpriority="high"
-        width="600"
-        height="600"
-      />
     </div>
   </div>
 </section>

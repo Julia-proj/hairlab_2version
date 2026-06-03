@@ -6,14 +6,18 @@ import Container from '../ui/Container.astro';
 
 <Section alt id="author">
   <Container class="author__grid">
-    <div>
-      <img
-        src={hairlab.author.image.src}
-        alt={hairlab.author.image.alt}
-        loading="lazy"
-        width="500"
-        height="600"
-      />
+    <div class="author__media">
+      {hairlab.author.images.map((image, index) => (
+        <figure class={`author__photo author__photo--${index + 1}`}>
+          <img
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            width={image.width}
+            height={image.height}
+          />
+        </figure>
+      ))}
     </div>
     <div>
       <p class="eyebrow">
