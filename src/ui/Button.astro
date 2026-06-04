@@ -21,32 +21,20 @@ const {
   style,
 } = Astro.props;
 
-const checkoutUrl = import.meta.env.PUBLIC_CHECKOUT_URL || '#';
-const finalHref = href || checkoutUrl;
+const finalHref = href || '#';
 
 const variantClass = variant === 'primary' ? 'btn--primary' : variant === 'ghost' ? 'btn--ghost' : 'btn--light';
 const sizeClass = size === 'md' ? 'btn--md' : '';
 const classes = `btn ${variantClass} ${sizeClass} ${className || ''}`;
 ---
 
-{finalHref.startsWith('http') ? (
-  <a
-    href={finalHref}
-    class={classes}
-    target={target || '_blank'}
-    rel={rel || 'noopener noreferrer'}
-    data-cta-id={ctaId}
-    style={style}
-  >
-    <slot />
-  </a>
-) : (
-  <a
-    href={finalHref}
-    class={classes}
-    data-cta-id={ctaId}
-    style={style}
-  >
-    <slot />
-  </a>
-)}
+<a
+  href={finalHref}
+  class={classes}
+  target={target}
+  rel={rel}
+  data-cta-id={ctaId}
+  style={style}
+>
+  <slot />
+</a>

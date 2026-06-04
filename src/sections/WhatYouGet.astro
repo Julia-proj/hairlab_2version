@@ -5,6 +5,7 @@ import Container from '../ui/Container.astro';
 import FeatureList from '../ui/FeatureList.astro';
 import PricingCard from '../ui/PricingCard.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
+import { links } from '../lib/links';
 ---
 
 <Section alt id="inside">
@@ -18,7 +19,8 @@ import SectionHeading from '../ui/SectionHeading.astro';
         newPrice={hairlab.whatYouGet.pricing.newPrice}
         note={hairlab.whatYouGet.pricing.note}
         ctaText={hairlab.whatYouGet.pricing.ctaText}
-        ctaId="pricing-1"
+        ctaId="what-you-get"
+        ctaHref={links.offer('what-you-get')}
       />
     </div>
   </Container>

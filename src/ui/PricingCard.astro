@@ -8,9 +8,10 @@ interface Props {
   note: string;
   ctaText: string;
   ctaId: string;
+  ctaHref: string;
 }
 
-const { eyebrow, oldPrice, newPrice, note, ctaText, ctaId } = Astro.props;
+const { eyebrow, oldPrice, newPrice, note, ctaText, ctaId, ctaHref } = Astro.props;
 ---
 
 <div class="pricing-card">
@@ -26,7 +27,7 @@ const { eyebrow, oldPrice, newPrice, note, ctaText, ctaId } = Astro.props;
   <p class="caption pricing-card__note">
     {note}
   </p>
-  <Button variant="primary" data-cta-id={ctaId} class="w-full">
+  <Button variant="primary" href={ctaHref} data-cta-id={ctaId} class="w-full">
     {ctaText}
   </Button>
 </div>

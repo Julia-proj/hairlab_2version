@@ -4,3 +4,6 @@ dist/
 .env
 .DS_Store
 *.log
+.playwright-mcp/
+audit-*.png
+detail-*.png

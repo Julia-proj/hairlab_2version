@@ -18,6 +18,9 @@ import Container from '../ui/Container.astro';
           />
         </figure>
       ))}
+      <figure class="author__photo author__photo--3">
+        <div class="author__photo-placeholder">Фото студии</div>
+      </figure>
     </div>
     <div>
       <p class="eyebrow">
@@ -31,6 +34,14 @@ import Container from '../ui/Container.astro';
           {paragraph}
         </p>
       ))}
+      <div class="author__stats">
+        {hairlab.author.stats.map((stat) => (
+          <div class="author__stat">
+            <span class="author__stat-value">{stat.value}</span>
+            <span class="author__stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
       <ul class="author__list">
         {hairlab.author.list.map((item) => (
           <li>

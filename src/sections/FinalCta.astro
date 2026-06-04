@@ -1,6 +1,7 @@
 ---
 import { hairlab } from '../data/hairlab';
 import Button from '../ui/Button.astro';
+import { links } from '../lib/links';
 ---
 
 <section class="final-cta">
@@ -8,7 +9,7 @@ import Button from '../ui/Button.astro';
     <h2 class="h2" style="color: var(--color-cream);">
       {hairlab.finalCta.title}
     </h2>
-    <Button variant="light" data-cta-id="final" style="margin-top: 32px;">
+    <Button variant="light" href={links.offer('final')} data-cta-id="final" style="margin-top: 32px;">
       {hairlab.finalCta.ctaText}
     </Button>
     <p class="caption" style="opacity: 0.7; margin-top: 24px;">

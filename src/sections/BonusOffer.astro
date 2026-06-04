@@ -3,6 +3,8 @@ import { hairlab } from '../data/hairlab';
 import Button from '../ui/Button.astro';
 import Section from '../ui/Section.astro';
 import Container from '../ui/Container.astro';
+import { links } from '../lib/links';
+import CountdownTimer from '../islands/CountdownTimer';
 ---
 
 <Section alt>
@@ -21,9 +23,14 @@ import Container from '../ui/Container.astro';
           </span>
         </div>
       ))}
-      <Button variant="primary" data-cta-id="bonus">
+      <Button variant="primary" href={links.offer('bonus')} data-cta-id="bonus">
         {hairlab.bonusOffer.ctaText}
       </Button>
+      <CountdownTimer
+        client:visible
+        endDate={hairlab.campaign.endDate}
+        label={hairlab.campaign.timerLabel}
+      />
     </div>
     <div class="limited-offer">
       <p class="limited-offer__text">

@@ -1,6 +1,7 @@
 ---
 import { hairlab } from '../data/hairlab';
 import Button from '../ui/Button.astro';
+import { links } from '../lib/links';
 ---
 
 <section class="hero">
@@ -25,15 +26,24 @@ import Button from '../ui/Button.astro';
         {hairlab.hero.subtitle}
       </p>
       <div class="hero__cta-row">
-        <Button variant="light" data-cta-id="hero-primary">
+        <Button variant="light" href={links.offer('hero')} data-cta-id="hero">
           {hairlab.hero.primaryCta}
         </Button>
-        <Button variant="ghost" href="#program">
-          {hairlab.hero.ghostCta}
-        </Button>
       </div>
+      <a
+        href={links.quiz('hero')}
+        class="hero__test-link"
+        data-cta-id="hero-test"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {hairlab.hero.testCta.text}
+      </a>
       <p class="caption hero__micro">
         {hairlab.hero.micro}
+      </p>
+      <p class="hero__social-proof">
+        ★ 5000+ клиенток · 6 лет практики · Студия в Мадриде
       </p>
     </div>
   </div>

@@ -1,5 +1,6 @@
 ---
 import { hairlab } from '../data/hairlab';
+import { links } from '../lib/links';
 ---
 
 <nav class="nav">
@@ -14,8 +15,19 @@ import { hairlab } from '../data/hairlab';
         </a>
       ))}
     </div>
-    <a href={import.meta.env.PUBLIC_CHECKOUT_URL || '#'} class="nav__cta" data-cta-id="nav">
-      {hairlab.nav.ctaText}
-    </a>
+    <div class="nav__actions">
+      <a
+        href={links.quiz('nav')}
+        class="nav__test"
+        data-cta-id="nav-test"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {hairlab.nav.testCta.text}
+      </a>
+      <a href={links.offer('nav')} class="nav__cta" data-cta-id="nav">
+        {hairlab.nav.ctaText}
+      </a>
+    </div>
   </div>
 </nav>

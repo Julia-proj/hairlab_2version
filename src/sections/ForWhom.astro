@@ -1,0 +1,28 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+---
+
+<Section alt>
+  <Container>
+    <SectionHeading
+      eyebrow={hairlab.forWhom.eyebrow}
+      title={hairlab.forWhom.title}
+      centered
+    />
+    <div class="for-whom-list">
+      {hairlab.forWhom.items.map((item) => (
+        <div class="for-whom-item">
+          <span class="for-whom-check" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10.5L8 14.5L16 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="for-whom-text">{item}</span>
+        </div>
+      ))}
+    </div>
+  </Container>
+</Section>

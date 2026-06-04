@@ -7,22 +7,32 @@ import Container from '../ui/Container.astro';
 <Section alt>
   <Container>
     <div class="text-center">
-      <p class="eyebrow">
-        {hairlab.reels.eyebrow}
-      </p>
-      <h2 class="h2">
-        {hairlab.reels.title}
-      </h2>
+      <p class="eyebrow">{hairlab.reels.eyebrow}</p>
+      <h2 class="h2">{hairlab.reels.title}</h2>
+      <p class="reels__subtitle">{hairlab.reels.subtitle}</p>
     </div>
     <div class="reels__grid">
       {hairlab.reels.items.map((item) => (
         <a
           href={item.href}
+          class="reel-card"
           target="_blank"
           rel="noopener noreferrer"
-          class="reel-card"
+          aria-label={item.title}
         >
-          {item.text}
+          <img
+            class="reel-card__img"
+            src={item.preview}
+            alt={item.title}
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="reel-card__badge">{item.category}</span>
+          <div class="reel-card__overlay">
+            <span class="reel-card__author">{item.author}</span>
+            <span class="reel-card__title">{item.title}</span>
+            <span class="reel-card__play">▶ Смотреть</span>
+          </div>
         </a>
       ))}
     </div>

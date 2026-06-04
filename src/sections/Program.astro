@@ -1,0 +1,38 @@
+---
+import { hairlab } from '../data/hairlab';
+import Section from '../ui/Section.astro';
+import Container from '../ui/Container.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+---
+
+<Section id="program">
+  <Container>
+    <SectionHeading
+      eyebrow={hairlab.program.eyebrow}
+      title={hairlab.program.title}
+    />
+    <p class="program-subtitle">{hairlab.program.subtitle}</p>
+    <div class="program-grid">
+      {hairlab.program.modules.map((mod) => (
+        <div class="program-card">
+          <div class="program-card__header">
+            <span class="program-card__num" aria-hidden="true">{mod.num}</span>
+            <h3 class="program-card__title">{mod.title}</h3>
+          </div>
+          <div class="program-card__points">
+            {mod.points.map((point) => (
+              <div class="program-card__point">
+                <span class="program-card__check" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8.5L6.5 12L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="program-card__point-text">{point}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </Container>
+</Section>
