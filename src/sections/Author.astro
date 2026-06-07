@@ -19,7 +19,13 @@ import Container from '../ui/Container.astro';
         </figure>
       ))}
       <figure class="author__photo author__photo--3">
-        <div class="author__photo-placeholder">Фото студии</div>
+        <img
+          src={hairlab.author.studio.src}
+          alt={hairlab.author.studio.alt}
+          loading="lazy"
+          width={hairlab.author.studio.width}
+          height={hairlab.author.studio.height}
+        />
       </figure>
     </div>
     <div>
