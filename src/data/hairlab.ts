@@ -345,7 +345,7 @@ export const hairlab = {
     note: 'доступ навсегда · оплата картой',
   },
   campaign: {
-    endDate: '2026-06-30T23:59:59Z',
+    endDate: '2026-06-10T23:59:59Z',
     timerLabel: 'До конца акции:',
   },
   footer: {
