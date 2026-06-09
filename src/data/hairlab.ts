@@ -25,8 +25,8 @@ export const hairlab = {
     testCta: { text: 'Не уверена? Пройди тест за 2 минуты' },
     micro: 'обычная цена 139€ · доступ навсегда',
     image: {
-      src: '/images/hairlab/hero-salon.jpg',
-      alt: 'Интерьер студии HAIRLAB в Мадриде',
+      src: '/images/hairlab/hero-portrait.jpg',
+      alt: 'Елена Александрова, основатель HAIRLAB',
     },
   },
   marquee: {
@@ -242,10 +242,10 @@ export const hairlab = {
       },
     ],
     studio: {
-      src: '/images/hairlab/studio.jpg',
-      alt: 'Елена Александрова в студии HAIRLAB, Мадрид',
-      width: 1024,
-      height: 1536,
+      src: '/images/hairlab/salon-interior.jpg',
+      alt: 'Интерьер студии HAIRLAB в Мадриде',
+      width: 1080,
+      height: 1551,
     },
   },
   whyNow: {
