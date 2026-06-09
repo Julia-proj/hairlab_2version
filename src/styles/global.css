@@ -269,20 +269,20 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 28%;
+  object-position: 50% 32%;
 }
 @media (min-width: 768px) {
-  .hero__bg { object-position: 52% 36%; }
+  .hero__bg { object-position: 52% 40%; }
 }
 @media (min-width: 1024px) {
-  .hero__bg { object-position: 54% 42%; }
+  .hero__bg { object-position: 54% 46%; }
 }
 .hero__shade {
   background: linear-gradient(
     180deg,
-    rgba(39, 39, 39, 0.08) 0%,
-    rgba(39, 39, 39, 0.08) 38%,
-    rgba(39, 39, 39, 0.76) 100%
+    rgba(39, 39, 39, 0.18) 0%,
+    rgba(39, 39, 39, 0.22) 42%,
+    rgba(39, 39, 39, 0.86) 100%
   );
 }
 .hero__content {
@@ -658,6 +658,32 @@ a {
   line-height: 1;
   flex-shrink: 0;
 }
+.bonus__timer {
+  margin-top: 32px;
+}
+.countdown {
+  width: 100%;
+}
+.countdown > span {
+  flex-basis: 100%;
+}
+.countdown__blocks {
+  gap: 4px !important;
+}
+.countdown__blocks > div {
+  min-width: 0 !important;
+}
+@media (min-width: 380px) {
+  .countdown > span {
+    flex-basis: auto;
+  }
+  .countdown__blocks {
+    gap: 8px !important;
+  }
+  .countdown__blocks > div {
+    min-width: 44px !important;
+  }
+}
 .limited-offer {
   background: var(--color-cream-3);
   padding: 40px;
@@ -808,9 +834,18 @@ a {
 }
 .author__photo--3 {
   grid-column: 1 / -1;
-  aspect-ratio: 16 / 9;
-  max-height: none;
+  aspect-ratio: 3 / 4;
+  max-height: 460px;
   margin-top: 0;
+}
+.author__photo--3 img {
+  object-position: 60% 28%;
+}
+@media (min-width: 768px) {
+  .author__photo--3 {
+    aspect-ratio: 16 / 10;
+    max-height: 420px;
+  }
 }
 .author__photo-placeholder {
   width: 100%;

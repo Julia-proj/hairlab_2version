@@ -40,8 +40,9 @@ export default function CountdownTimer(props: Props) {
       when={!time().expired}
       fallback={<div style={{ opacity: 0.5, 'font-size': '14px' }}>Акция завершена</div>}
     >
-      <div style={{
-        display: 'inline-flex',
+      <div class="countdown" style={{
+        display: 'flex',
+        'flex-wrap': 'wrap',
         'align-items': 'center',
         gap: '12px',
         'font-family': 'var(--font-ui)',
@@ -49,7 +50,7 @@ export default function CountdownTimer(props: Props) {
         {props.label && (
           <span style={{ 'font-size': '14px', opacity: 0.8 }}>{props.label}</span>
         )}
-        <div style={{
+        <div class="countdown__blocks" style={{
           display: 'flex',
           gap: '8px',
           'font-variant-numeric': 'tabular-nums',
