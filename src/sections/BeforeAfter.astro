@@ -14,15 +14,17 @@ import Container from '../ui/Container.astro';
         {hairlab.beforeAfter.title}
       </h2>
     </div>
-    <div style="display: grid; gap: 24px; margin-top: 48px;">
+    <div class="beforeafter__grid">
       {hairlab.beforeAfter.images.map((img) => (
-        <img
-          src={img.src}
-          alt={img.alt}
-          loading="lazy"
-          width="600"
-          height="400"
-        />
+        <figure class="beforeafter__card">
+          <img
+            src={img.src}
+            alt={img.alt}
+            loading="lazy"
+            width="800"
+            height="1000"
+          />
+        </figure>
       ))}
     </div>
     <p class="caption" style="text-align: center; margin-top: 24px;">

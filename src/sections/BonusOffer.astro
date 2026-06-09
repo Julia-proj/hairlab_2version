@@ -26,11 +26,13 @@ import CountdownTimer from '../islands/CountdownTimer';
       <Button variant="primary" href={links.offer('bonus')} data-cta-id="bonus">
         {hairlab.bonusOffer.ctaText}
       </Button>
-      <CountdownTimer
-        client:visible
-        endDate={hairlab.campaign.endDate}
-        label={hairlab.campaign.timerLabel}
-      />
+      <div class="bonus__timer">
+        <CountdownTimer
+          client:visible
+          endDate={hairlab.campaign.endDate}
+          label={hairlab.campaign.timerLabel}
+        />
+      </div>
     </div>
     <div class="limited-offer">
       <p class="limited-offer__text">

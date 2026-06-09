@@ -25,8 +25,8 @@ export const hairlab = {
     testCta: { text: 'Не уверена? Пройди тест за 2 минуты' },
     micro: 'обычная цена 139€ · доступ навсегда',
     image: {
-      src: '/images/hairlab/hero-new.webp',
-      alt: 'Эстетика HAIRLAB, восстановление волос',
+      src: '/images/hairlab/hero-portrait.jpg',
+      alt: 'Елена Александрова, основатель HAIRLAB',
     },
   },
   marquee: {
@@ -241,6 +241,12 @@ export const hairlab = {
         height: 1234,
       },
     ],
+    studio: {
+      src: '/images/hairlab/salon-interior.jpg',
+      alt: 'Интерьер студии HAIRLAB в Мадриде',
+      width: 1080,
+      height: 1551,
+    },
   },
   whyNow: {
     title: 'Почему сейчас',
@@ -317,7 +323,7 @@ export const hairlab = {
       },
       {
         question: 'Нужно ли быть мастером?',
-        answer: 'Нет. Курс рассчитан на любой уровень: от полного новичка до тех, кто уже что-то пробовал. Всё объясняется с нуля и пошагово.',
+        answer: 'Нет. Курс р��ссчитан на любой уровень: от полного новичка до тех, кто уже что-то пробовал. Всё объясняется с нуля и пошагово.',
       },
       {
         question: 'Сколько длится доступ?',
